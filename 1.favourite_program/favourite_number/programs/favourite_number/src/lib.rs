@@ -1,3 +1,5 @@
+
+// Header for anchor 
 use anchor_lang::prelude::*;
 
 
@@ -5,10 +7,10 @@ declare_id!("");
 
 
 // this is how contants are assigned in rust or anchor
-
+// specifies the typenof account it is 
 pub const ANCHOR_DISCRIMINATOR:usize =8;
 
-// after adding below #program it turned into solana program
+// after adding below #program it turned into solana smart contract
 #[program]
 
 pub mod favourites{
@@ -45,7 +47,7 @@ pub mod favourites{
 pub struct Favourites{
    pub number :u64,
 
-   #[max_len(50)]// isse pta chalega ki range kitni hai ..iske 
+   #[max_len(50)]// isse pta chalega ki  kitna lamba ho sakta  hai ..ye
    pub color :String ,
 
    #[max_len(5,50)]
